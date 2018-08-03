@@ -7,16 +7,19 @@ import javax.naming.NamingException;
 
 import com.tma.ejb.comp.b.business.CompBCalculator;
 
-public class CompB extends AdditonalComponent{
-	
-	public CompB(float val) {
-		super(val);
+public class CompB extends AdditonalComponent {
+
+	public CompB(HelloComponent comp) {
+		super(comp);
+		this.module = "ejbCompB";
 	}
 
 	@Override
-	public float getValue(Context context) throws NamingException {
-		CompBCalculator calculator = (CompBCalculator) context.lookup(getLookupStr(CompBCalculator.class));
-		return calculator.calculate(value);
-	}
+	public void setValue(Context context, float val) throws NamingException {
 
+		CompBCalculator compB = (CompBCalculator) context.lookup(getLookupStr(this.module, CompBCalculator.class));
+		float newVal = compB.calculate(val);
+		System.out.println("Component B setting value to: " + newVal);
+		this.component.setValue(context, newVal);
+	}
 }

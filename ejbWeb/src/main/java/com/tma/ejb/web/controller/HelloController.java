@@ -22,12 +22,9 @@ public class HelloController {
 		String msg = null;
 		float value = 42;
 		try {
-			msg = new Hello()
-					.getHello(EJBInitialContext.getContext())
-					.getMsg();
-			value = new Hello()
-					.getValue(EJBInitialContext.getContext())
-					.getValue();
+			Hello hello = new Hello();
+			msg = hello.getHello(EJBInitialContext.getContext());
+			value = hello.getValue(EJBInitialContext.getContext());
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}
@@ -41,12 +38,11 @@ public class HelloController {
 		System.out.println("updating value to " + rq.getVal());
 		try {
 			new Hello()
-				.getValue(EJBInitialContext.getContext())
-				.setValue(rq.getVal());
+				.setValue(EJBInitialContext.getContext(), rq.getVal());
 			return HTTPResponse.ACCEPTED;
 			
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 			return HTTPResponse.SERVER_ERROR;
 		}
 	}

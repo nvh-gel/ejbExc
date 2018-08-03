@@ -11,6 +11,9 @@ import org.springframework.context.annotation.Bean;
 public class EJBInitialContext {
 	private static Context context;
 
+	private EJBInitialContext() {
+	}
+
 	@Bean
 	public static Context getContext() throws NamingException {
 		if (context == null) {
