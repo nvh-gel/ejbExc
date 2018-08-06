@@ -13,17 +13,9 @@ import com.tma.ejb.server.business.HelloWorld;
 @TransactionManagement(TransactionManagementType.BEAN)
 public class HelloWorldBean implements HelloWorld {
 
-    /**
-     * Default constructor. 
-     */
-    public HelloWorldBean() {
-    }
-
 	@Override
 	public String getMsg() {
-		return "Hello World!";
+		return "Hello EJB!";
 	}
-    
-    
 
 }

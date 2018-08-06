@@ -13,11 +13,6 @@ import com.tma.ejb.server.business.ValueHolder;
 @TransactionManagement(TransactionManagementType.BEAN)
 public class ValueHolderBean implements ValueHolder {
 	private static float value;
-    /**
-     * Default constructor. 
-     */
-    public ValueHolderBean() {
-    }
 
 	@Override
 	public float getValue() {
