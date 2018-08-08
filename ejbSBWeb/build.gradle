@@ -24,9 +24,6 @@ repositories {
 	mavenCentral()
 }
 
-configurations {
-	providedRuntime
-}
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
@@ -36,6 +33,7 @@ dependencies {
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('io.projectreactor:reactor-test')
-	//compile "org.wildfly:wildfly-ejb-client-bom:10.1.0.Final"
-	//compile "com.baeldung.spring.ejb:ejb-remote-for-spring:1.0.1"
+	compile "org.wildfly:wildfly-ejb-client-bom:10.1.0.Final"
+	compile "com.baeldung.spring.ejb:ejb-remote-for-spring:1.0.1"
+	
 }

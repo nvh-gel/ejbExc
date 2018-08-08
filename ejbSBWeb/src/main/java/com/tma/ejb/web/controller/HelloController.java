@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.tma.ejb.web.model.Hello;
+import com.tma.ejb.web.model.impl.Hello;
 import com.tma.ejb.web.utils.EJBUtils;
 import com.tma.ejb.web.utils.HTTPResponse;
 import com.tma.ejb.web.utils.InputRequest;

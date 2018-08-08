@@ -1,4 +1,4 @@
-package com.tma.ejb.web.model;
+package com.tma.ejb.web.model.impl;
 
 import static com.tma.ejb.web.utils.EJBUtils.getLookupStr;
 
@@ -8,8 +8,8 @@ import java.util.List;
 import javax.naming.Context;
 import javax.naming.NamingException;
 
-import com.tma.ejb.server.business.HelloWorld;
-import com.tma.ejb.server.business.ValueHolder;
+import com.tma.ejb.web.model.HelloWorld;
+import com.tma.ejb.web.model.ValueHolder;
 import com.tma.ejb.web.utils.ComponentFactory;
 import com.tma.ejb.web.utils.YAMLConfig;
 

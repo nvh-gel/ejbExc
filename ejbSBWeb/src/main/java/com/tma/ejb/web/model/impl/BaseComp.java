@@ -1,11 +1,11 @@
-package com.tma.ejb.web.model;
+package com.tma.ejb.web.model.impl;
 
 import static com.tma.ejb.web.utils.EJBUtils.getLookupStr;
 
 import javax.naming.Context;
 import javax.naming.NamingException;
 
-import com.tma.ejb.server.business.ValueHolder;
+import com.tma.ejb.web.model.ValueHolder;
 
 public class BaseComp implements HelloComponent {
 	private String module;

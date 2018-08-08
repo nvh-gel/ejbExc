@@ -1,4 +1,4 @@
-package com.tma.ejb.web.model;
+package com.tma.ejb.web.model.impl;
 
 
 import javax.naming.Context;

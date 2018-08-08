@@ -1,10 +1,10 @@
 package com.tma.ejb.web.utils;
 
-import com.tma.ejb.web.model.AdditonalComponent;
-import com.tma.ejb.web.model.BaseComp;
-import com.tma.ejb.web.model.CompA;
-import com.tma.ejb.web.model.CompB;
-import com.tma.ejb.web.model.CompC;
+import com.tma.ejb.web.model.impl.AdditonalComponent;
+import com.tma.ejb.web.model.impl.BaseComp;
+import com.tma.ejb.web.model.impl.CompA;
+import com.tma.ejb.web.model.impl.CompB;
+import com.tma.ejb.web.model.impl.CompC;
 
 public class ComponentFactory {
 	private BaseComp base;

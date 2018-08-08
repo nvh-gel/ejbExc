@@ -1,4 +1,4 @@
-package com.tma.ejb.web.model;
+package com.tma.ejb.web.model.impl;
 
 import static com.tma.ejb.web.utils.EJBUtils.getLookupStr;
 
@@ -8,7 +8,7 @@ import javax.naming.NamingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.tma.ejb.comp.c.business.CompCCalculator;
+import com.tma.ejb.web.model.CompCCalculator;
 
 public class CompC extends AdditonalComponent {
 	public CompC(HelloComponent comp) {
