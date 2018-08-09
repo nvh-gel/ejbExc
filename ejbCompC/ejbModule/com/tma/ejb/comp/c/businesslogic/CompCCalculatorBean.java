@@ -11,11 +11,7 @@ public class CompCCalculatorBean implements CompCCalculator {
 
 	@Override
 	public float calculate(float value) {
-		if (value > 30) {
-			return value + 10;
-		} else {
-			return value + 25;
-		}
+		return value > 30 ? value + 10 : value + 25;
 	}
 
 }

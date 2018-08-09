@@ -12,5 +12,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="ejbModule/ejbCompA.jar"/>
+	<classpathentry kind="lib" path="ejbModule/ejbCompB.jar"/>
+	<classpathentry kind="lib" path="ejbModule/ejbCompC.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

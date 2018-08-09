@@ -12,11 +12,7 @@ public class CompACalculatorBean implements CompACalculator {
 
 	@Override
 	public float calculate(float value) {
-		if (value > 10) {
-			return value + 3;
-		} else {
-			return value + 10;
-		}
+		return value > 10 ? value + 3 : value + 10;
 	}
 
 }

@@ -13,10 +13,6 @@ public class CompBCalculatorBean implements CompBCalculator {
 
 	@Override
 	public float calculate(float value) {
-		if (value > 20) {
-			return value + 5;
-		} else {
-			return value + 20;
-		}
+		return value > 20 ? value + 5 : value + 20;
 	}
 }
