@@ -1,0 +1,10 @@
+rootProject.name = 'ejbServer'
+
+include ':ejbCompA'
+project(':ejbCompA').projectDir = new File("../ejbCompA")
+
+include ':ejbCompB'
+project(':ejbCompB').projectDir = new File("../ejbCompB")
+
+include ':ejbCompC'
+project(':ejbCompC').projectDir = new File("../ejbCompC")
