@@ -1,5 +1,7 @@
 package com.tma.ejb.server.businesslogic;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,6 +10,7 @@ import javax.ejb.EJB;
 import javax.ejb.Stateful;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
+import javax.xml.ws.spi.http.HttpContext;
 
 import com.tma.ejb.server.business.ValueHolder;
 import com.tma.ejb.server.utils.ComponentConfig;
@@ -20,33 +23,18 @@ import com.tma.ejb.server.utils.ComponentConfig;
 @TransactionManagement(TransactionManagementType.BEAN)
 public class ValueHolderBean implements ValueHolder {
 	
-	private static float value;
+	private float value;
 	
 	@EJB
 	ComponentConfig config;
 
 	@Override
 	public float getValue() {
-		return value;
+		return this.value;
 	}
 
 	@Override
 	public void setValue(float val) {
-		value = this.calculateValue(val);
+		
 	}
-	
-	private float calculateValue(float val) {
-		System.out.println("Calculating value " + val);
-		
-		List<String> compOrder = Arrays.asList(config.getProperty("installation").split(","));
-		
-		float newVal[] = {val};
-		
-//		compOrder.forEach(comp -> {
-//			AdditionalComponentBean component = new ComponentFactory().produce(comp);
-//			newVal[0] = component.calculate(val);
-//		});		
-		return newVal[0];
-	}
-
 }

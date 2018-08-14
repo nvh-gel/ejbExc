@@ -19,6 +19,3 @@ rootProject.name = 'ejbExc'
 
 include 'ejbSBWeb'
 include 'ejbServer'
-include 'ejbCompA'
-include 'ejbCompB'
-include 'ejbCompC'

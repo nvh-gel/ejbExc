@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><sy:switchyard xmlns:sy="urn:switchyard-config:switchyard:2.0" xmlns="urn:switchyard-config:switchyard:2.0" xmlns:bean="urn:switchyard-component-bean:config:2.0" xmlns:http="urn:switchyard-component-http:config:2.0" xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912" name="ejbSWCompB" targetNamespace="urn:com.example.switchyard:ejbSWCompB:1.0">
+    <sca:composite name="ejbSWCompB" targetNamespace="urn:com.example.switchyard:ejbSWCompB:1.0">
+        <sca:service name="CompBCalculator" promote="CompBCalculatorBean/CompBCalculator">
+            <sca:interface.java interface="com.example.switchyard.ejbSWCompB.CompBCalculator"/>
+            <http:binding.http>
+                <sy:operationSelector operationName="calculate"/>
+                <http:contextPath>ejbSWCompB/calculate</http:contextPath>
+            </http:binding.http>
+        </sca:service>
+        <sca:component name="CompBCalculatorBean">
+            <bean:implementation.bean class="com.example.switchyard.ejbSWCompB.CompBCalculatorBean"/>
+            <sca:service name="CompBCalculator">
+                <sca:interface.java interface="com.example.switchyard.ejbSWCompB.CompBCalculator"/>
+            </sca:service>
+        </sca:component>
+    </sca:composite>
+</sy:switchyard>

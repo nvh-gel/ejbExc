@@ -30,8 +30,10 @@ configurations {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-web-services')
+	compile('org.springframework.boot:spring-boot-starter-webflux')
+	compile('org.springframework.boot:spring-boot-starter-websocket')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-	compile('org.springframework.boot:spring-boot-starter-integration')
-	compile project(':ejbServer')
+	testCompile('io.projectreactor:reactor-test')
 }
