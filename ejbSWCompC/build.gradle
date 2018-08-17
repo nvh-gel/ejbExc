@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.example.switchyard'
+version = '0.0.1-SNAPSHOT'
+
+description = """com.example.switchyard:ejbSWCompC"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+     maven { url "https://maven.repository.redhat.com/ga" }
+}
+dependencies {
+	compile group: 'org.switchyard', name: 'switchyard-api', version: '2.1.0.Final'
+	compile group: 'org.switchyard', name: 'switchyard-plugin', version: '2.1.0.Final'
+    compile group: 'org.switchyard.components', name: 'switchyard-component-bean', version:'2.1.0.Final'
+    compile group: 'org.switchyard.components', name: 'switchyard-component-http', version:'2.1.0.Final'
+    compile group: 'org.switchyard.components', name: 'switchyard-component-camel-jms', version:'2.1.0.Final'
+    compile group: 'org.switchyard', name: 'switchyard-api', version:'2.1.0.Final'
+    compile group: 'org.switchyard', name: 'switchyard-transform', version:'2.1.0.Final'
+    compile group: 'org.switchyard', name: 'switchyard-validate', version:'2.1.0.Final'
+    testCompile group: 'org.switchyard', name: 'switchyard-test', version:'2.1.0.Final'
+    testCompile group: 'org.switchyard.components', name: 'switchyard-component-test-mixin-cdi', version:'2.1.0.Final'
+}
